@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Root container-->
+    <RelativeLayout
+        android:id="@+id/root_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <!--View while view is expanded-->
+        <RelativeLayout
+            android:id="@+id/expanded_container"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextureView
+                android:id="@+id/texture_view_floating"
+                android:layout_margin="10dp"
+                android:layout_width="100dp"
+                android:layout_height="150dp" />
+
+            <!--Close button-->
+            <ImageView
+                android:id="@+id/btn_remove_expanded"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="100dp"
+                android:src="@drawable/ic_close"
+                tools:ignore="ContentDescription"/>
+
+            <ImageView
+                android:id="@+id/btn_collapsed"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="90dp"
+                android:src="@mipmap/ic_visibility_off"
+                tools:ignore="ContentDescription"/>
+
+            <ImageView
+                android:id="@+id/btn_add_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="120dp"
+                android:src="@mipmap/ic_add_photo"
+                tools:ignore="ContentDescription"/>
+
+            <ImageView
+                android:id="@+id/btn_record_video"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="120dp"
+                android:src="@mipmap/ic_videocam"
+                tools:ignore="ContentDescription"/>
+
+            <Chronometer
+                android:id="@+id/chronometer_video"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="25dp"
+                android:layout_margin="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <!--View while view is collapsed-->
+        <RelativeLayout
+            android:id="@+id/collapse_view"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--Icon of floating widget -->
+            <ImageView
+                android:id="@+id/collapsed_iv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_visibility" />
+
+            <!--Close button-->
+            <ImageView
+                android:id="@+id/btn_remove_collapsed"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="33dp"
+                android:src="@drawable/ic_close"
+                tools:ignore="ContentDescription"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
